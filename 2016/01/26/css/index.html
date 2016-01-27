@@ -5,16 +5,19 @@
   
   <title>css | 前端博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description">
+  <meta name="description" content="Flex布局是什么？Flex 意为“弹性布局”,用来为盒状模型提供最大的灵活性。任何一个容器都可以指定Flex布局，块元素可以，行内元素也可以。Webkit内核的浏览器，必须加上-webkit 前缀。例如：    .box{        display:-webkit-flex; /Safari/        display:flex;    }
+基本概念1 flex 容器（flex cont">
 <meta property="og:type" content="article">
 <meta property="og:title" content="css">
 <meta property="og:url" content="http://yoursite.com/2016/01/26/css/index.html">
 <meta property="og:site_name" content="前端博客">
-<meta property="og:description">
-<meta property="og:updated_time" content="2016-01-26T11:58:35.000Z">
+<meta property="og:description" content="Flex布局是什么？Flex 意为“弹性布局”,用来为盒状模型提供最大的灵活性。任何一个容器都可以指定Flex布局，块元素可以，行内元素也可以。Webkit内核的浏览器，必须加上-webkit 前缀。例如：    .box{        display:-webkit-flex; /Safari/        display:flex;    }
+基本概念1 flex 容器（flex cont">
+<meta property="og:updated_time" content="2016-01-26T15:42:47.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="css">
-<meta name="twitter:description">
+<meta name="twitter:description" content="Flex布局是什么？Flex 意为“弹性布局”,用来为盒状模型提供最大的灵活性。任何一个容器都可以指定Flex布局，块元素可以，行内元素也可以。Webkit内核的浏览器，必须加上-webkit 前缀。例如：    .box{        display:-webkit-flex; /Safari/        display:flex;    }
+基本概念1 flex 容器（flex cont">
   
     <link rel="alternate" href="/atom.xml" title="前端博客" type="application/atom+xml">
   
@@ -83,7 +86,58 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        
+        <h3 id="Flex_u5E03_u5C40_u662F_u4EC0_u4E48_uFF1F"><a href="#Flex_u5E03_u5C40_u662F_u4EC0_u4E48_uFF1F" class="headerlink" title="Flex布局是什么？"></a>Flex布局是什么？</h3><p>Flex 意为“弹性布局”,用来为盒状模型提供最大的灵活性。任何一个容器都可以指定Flex布局，块元素可以，行内元素也可以。<br>Webkit内核的浏览器，必须加上-webkit 前缀。<br>例如：<br>    .box{<br>        display:-webkit-flex; /<em>Safari</em>/<br>        display:flex;<br>    }</p>
+<h3 id="u57FA_u672C_u6982_u5FF5"><a href="#u57FA_u672C_u6982_u5FF5" class="headerlink" title="基本概念"></a>基本概念</h3><p>1 flex 容器（flex container）：采用Flex布局的元素。<br>2 flex 项目： 容器的所有子元素自动成为容器成员，简称为项目<br>3 水平主轴（main axis）:主轴开始的位置叫main start,结束的位置叫main end<br>4 交叉轴（cross start ）:交叉轴的开始位置叫做 cross start,结束的位置叫cross end</p>
+<h3 id="u5BB9_u5668_u7684_u5C5E_u6027"><a href="#u5BB9_u5668_u7684_u5C5E_u6027" class="headerlink" title="容器的属性"></a>容器的属性</h3><ul>
+<li><p>flex-direction 用处：决定主轴的方向。也就是项目的排列方向。<br>值： </p>
+<pre><code>row（默认值）：主轴为水平方向，起点在左端。
+row-reverse：主轴为水平方向，起点在右端。
+column：主轴为垂直方向，起点在上沿。
+column-reverse：主轴为垂直方向，起点在下沿。
+</code></pre></li>
+<li><p>flex-wrap用处： 如果一条轴线排不下，如何换行<br>值：</p>
+<pre><code>nowrap(默认)：不换行
+wrap: 换行，第一行在上方
+wrap-reverse: 换行，第一行在下方
+</code></pre></li>
+<li><p>flex-flow用处：定义了项目在主轴上的对齐方式。<br>值：</p>
+<pre><code>flex-start(默认值):左对齐
+flex-end:右对齐
+center:居中
+space-between:两端对齐，项目之间的间隔相等
+space-around:每个项目两侧的间隔相等，所以项目之间的间隔比项目与边框的间隔大一倍
+</code></pre></li>
+<li><p>align-items 用处定义项目在交叉轴上如何对齐<br>值：</p>
+<pre><code>stretch(默认值): 如果项目未设置高度或设为auto,将占满整个容器
+flex-start: 交叉轴的起点对齐
+flex-end: 交叉轴的终点对齐
+center:交叉轴的中点对齐
+baseline:项目的第一行文字的基线对齐
+</code></pre></li>
+<li><p>align-content 用处定义了多根轴线的对齐方式。如果项目中只有一根轴线，该属性不起作用。<br>值：</p>
+<pre><code>flex-start：与交叉轴的起点对齐。
+flex-end：与交叉轴的终点对齐。
+center：与交叉轴的中点对齐。
+space-between：与交叉轴两端对齐，轴线之间的间隔平均分布。
+space-around：每根轴线两侧的间隔都相等。所以，轴线之间的间隔比轴线与边框的间隔大一倍。
+stretch（默认值）：轴线占满整个交叉轴。
+</code></pre></li>
+</ul>
+<h3 id="u9879_u76EE_u7684_u5C5E_u6027"><a href="#u9879_u76EE_u7684_u5C5E_u6027" class="headerlink" title="项目的属性"></a>项目的属性</h3><ul>
+<li><p>order用处定义项目的排列顺序。数值越小，排列越靠前，默认为0；<br>值：</p>
+</li>
+<li><p>flex-grow用处定义项目的放大的比例，默认为0，即如果存在剩余空间，也不放大。<br>（如果所有项目的flex-grow属性都为1，则它们将等分剩余空间（如果有的话）。如果一个项目的flex-grow属性为2，其他项目都为1，则前者占据的剩余空间将比其他项多一倍。）</p>
+</li>
+<li><p>flex-shrink 用处定义了项目的缩小比例，默认为1，即如果空间不足，该项目将缩小。<br>（如果所有项目的flex-shrink属性都为1，当空间不足时，都将等比例缩小。如果一个项目的flex-shrink属性为0，其他项目都为1，则空间不足时，前者不缩小。）</p>
+</li>
+<li><p>flex-basis定义了在分配多余空间之前，项目占据的主轴空间。浏览器根据这个属性，计算主轴是否有多余空间。它的默认值为auto,即项目的本来大小。<br>（它可以设为跟width或height属性一样的值（比如350px），则项目将占据固定空间。）</p>
+</li>
+<li><p>flex 属性是 felx-grow, flex-shrink, flex-basis的简写，默认值为0 1 auto。 后两个属性可选。<br>（该属性有两个快捷值：auto (1 1 auto) 和 none (0 0 auto)。<br>建议优先使用这个属性，而不是单独写三个分离的属性，因为浏览器会推算相关值。）</p>
+</li>
+<li><p>align-self用处：允许单个项目有与其他项目不一样的对齐方式，可覆盖align-items属性。默认值为auto,表示继承父元素的align-items属性，如果没有父元素，则等同于stretch。</p>
+</li>
+</ul>
+
       
     </div>
     <footer class="article-footer">
